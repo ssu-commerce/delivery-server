@@ -1,17 +1,15 @@
-package com.ssu.commerce.auth
+package com.ssu.commerce.delivery
 
 import com.ssu.commerce.core.configs.EnableSsuCommerceCore
 import com.ssu.commerce.vault.config.EnableSsuCommerceVault
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
-import org.springframework.context.annotation.ComponentScan
-
 
 @EnableSsuCommerceVault
 @EnableSsuCommerceCore
 @SpringBootApplication
-class AuthApplication
+class DeliveryApplication
 
 fun main(args: Array<String>) {
-    runApplication<AuthApplication>(*args)
+    runApplication<DeliveryApplication>(*args)
 }
