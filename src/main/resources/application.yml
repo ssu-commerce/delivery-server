@@ -3,6 +3,10 @@ server:
 jwt:
   accessTokenValidMS: 3600000
   refreshTokenValidMS: 604800000
-spring:
-  profiles:
-    active: dev
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    base-package: "com.ssu.commerce.delivery"
+    title: Delivery
+    version: 0.0.0
