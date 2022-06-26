@@ -19,7 +19,7 @@ import javax.persistence.Table
 data class DeliveryInfoEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, updatable = false)
+    @Column(updatable = false)
     val id: Long? = null,
     @Column(nullable = false, updatable = false)
     val cartId: Long,
@@ -42,5 +42,5 @@ data class DeliveryInfoEntity(
     @Column(nullable = false, updatable = false)
     val deliveryStartedAt: LocalDateTime,
     @Column(nullable = false, updatable = false)
-    val deliveryArrivedAt: LocalDateTime,
+    val deliveryArrivedAt: LocalDateTime
 ) : BaseEntity()
