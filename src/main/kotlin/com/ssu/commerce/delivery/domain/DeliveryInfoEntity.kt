@@ -22,7 +22,7 @@ data class DeliveryInfoEntity(
     @Column(updatable = false)
     val id: Long? = null,
     @Column(nullable = false, updatable = false)
-    val cartId: Long,
+    val transactionId: Long,
     @Column(nullable = false, updatable = false)
     val orderBookId: Long,
     @Embedded
