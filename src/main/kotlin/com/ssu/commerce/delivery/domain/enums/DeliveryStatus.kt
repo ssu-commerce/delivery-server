@@ -1,4 +1,4 @@
-package com.ssu.commerce.delivery.domain.enum
+package com.ssu.commerce.delivery.domain.enums
 
 enum class DeliveryStatus(val description: String) {
     DS00("배송 요청"),

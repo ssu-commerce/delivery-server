@@ -4,7 +4,7 @@ import javax.persistence.Column
 import javax.persistence.Embeddable
 
 @Embeddable
-data class Address(
+data class AddressInfo(
     @Column(length = 255, nullable = false)
     val addressBase: String,
     @Column(length = 255, nullable = false)

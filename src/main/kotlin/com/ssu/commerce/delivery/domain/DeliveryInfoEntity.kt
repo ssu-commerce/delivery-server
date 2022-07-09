@@ -1,8 +1,8 @@
 package com.ssu.commerce.delivery.domain
 
 import com.ssu.commerce.core.jpa.BaseEntity
-import com.ssu.commerce.delivery.domain.enum.DeliveryStatus
-import com.ssu.commerce.delivery.domain.enum.DeliveryType
+import com.ssu.commerce.delivery.domain.enums.DeliveryStatus
+import com.ssu.commerce.delivery.domain.enums.DeliveryType
 import java.time.LocalDateTime
 import javax.persistence.Column
 import javax.persistence.Embedded
@@ -26,13 +26,13 @@ data class DeliveryInfoEntity(
     @Column(nullable = false, updatable = false)
     val orderBookId: Long,
     @Embedded
-    val deliveryFee: DeliveryFee,
+    val deliveryFee: DeliveryFeeInfo,
     @Column(nullable = false, updatable = false)
     val sellerAccountId: Long,
     @Column(nullable = false, updatable = false)
     val lenderAccountId: Long,
     @Embedded
-    var lenderAddress: Address,
+    var lenderAddress: AddressInfo,
     @Column(nullable = false, updatable = false)
     @Enumerated(EnumType.STRING)
     var deliveryType: DeliveryType,
