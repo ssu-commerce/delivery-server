@@ -1,6 +1,7 @@
 package com.ssu.commerce.delivery.converter
 
 import com.ssu.commerce.delivery.controller.model.DeliveryCreateModel
+import com.ssu.commerce.delivery.controller.model.DeliveryResponseModel
 import com.ssu.commerce.delivery.domain.DeliveryInfoEntity
 import com.ssu.commerce.delivery.vo.Delivery
 import org.mapstruct.Mapper
@@ -22,4 +23,6 @@ interface DeliveryConverter {
 
     @Mappings
     fun convert(deliveryCreate: DeliveryCreateModel): Delivery
+
+    fun convert(delivery: Delivery): DeliveryResponseModel
 }
