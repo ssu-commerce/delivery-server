@@ -17,7 +17,10 @@ interface DeliveryConverter {
         Mapping(target = "message", source = "lenderAddress.message"),
         Mapping(target = "zipcode", source = "lenderAddress.zipcode"),
         Mapping(target = "phoneNumber1", source = "lenderAddress.phoneNumber1"),
-        Mapping(target = "phoneNumber2", source = "lenderAddress.phoneNumber2")
+        Mapping(target = "phoneNumber2", source = "lenderAddress.phoneNumber2"),
+        Mapping(target = "deliveryFeeType", source = "deliveryFee.deliveryFeeType"),
+        Mapping(target = "baseFee", source = "deliveryFee.baseFee"),
+        Mapping(target = "deliveryStatus", source = "status")
     )
     fun convert(deliveryInfoEntity: DeliveryInfoEntity): Delivery
 

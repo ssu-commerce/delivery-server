@@ -1,7 +1,6 @@
 package com.ssu.commerce.delivery.controller.model
 
 import com.ssu.commerce.delivery.domain.enums.DeliveryFeeType
-import com.ssu.commerce.delivery.domain.enums.DeliveryStatus
 import com.ssu.commerce.delivery.domain.enums.DeliveryType
 import java.math.BigDecimal
 import java.time.LocalDateTime
@@ -33,7 +32,6 @@ data class DeliveryCreateModel(
     @Pattern(regexp = "\\d{3}-\\d{4}-\\d{4}")
     val phoneNumber2: String? = null,
     var deliveryType: DeliveryType,
-    var deliveryStatus: DeliveryStatus,
     @FutureOrPresent
     val deliveryStartedAt: LocalDateTime,
     @FutureOrPresent

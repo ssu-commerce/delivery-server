@@ -4,6 +4,7 @@ import com.ssu.commerce.delivery.controller.model.DeliveryCreateModel
 import com.ssu.commerce.delivery.domain.AddressInfo
 import com.ssu.commerce.delivery.domain.DeliveryFeeInfo
 import com.ssu.commerce.delivery.domain.DeliveryInfoEntity
+import com.ssu.commerce.delivery.domain.enums.DeliveryStatus
 import com.ssu.commerce.delivery.service.policy.DeliveryCreatePolicy
 import org.springframework.stereotype.Component
 
@@ -30,7 +31,7 @@ class DeliveryInfoEntityFactory(
                 deliveryCreateModel.phoneNumber2
             ),
             deliveryType = deliveryCreateModel.deliveryType,
-            status = deliveryCreateModel.deliveryStatus,
+            status = DeliveryStatus.DS00,
             deliveryStartedAt = deliveryCreateModel.deliveryStartedAt,
             deliveryArrivedAt = deliveryCreateModel.deliveryArrivedAt
         )
