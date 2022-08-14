@@ -12,7 +12,7 @@ class DeliveryInfoEntityFactory(
     private val createPolicies: List<DeliveryCreatePolicy>
 ) {
     fun buildNewEntity(deliveryCreateModel: DeliveryCreateModel): DeliveryInfoEntity {
-        deliveryCreateModel.apply { createPolicies.forEach { it.validate(this) } }
+        createPolicies.forEach { it.validate(deliveryCreateModel) }
 
         return DeliveryInfoEntity(
             id = null,

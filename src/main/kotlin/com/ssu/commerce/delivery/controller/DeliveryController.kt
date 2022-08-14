@@ -49,7 +49,10 @@ class DeliveryController(
             content = [Content(schema = Schema(implementation = DeliveryCreateModel::class))]
         )
     )
-    fun create(@RequestBody @Valid deliveryCreate: DeliveryCreateModel) {
+    fun create(
+        @RequestBody @Valid
+        deliveryCreate: DeliveryCreateModel
+    ) {
         deliveryService.create(deliveryCreate)
     }
 }
